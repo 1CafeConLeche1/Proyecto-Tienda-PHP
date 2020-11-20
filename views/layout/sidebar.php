@@ -14,11 +14,10 @@
             <h3><?= $_SESSION['identity']->nombre ?> <?= $_SESSION['identity']->apellidos ?></h3>
         <?php endif; ?>
         <ul>
-
             <?php if (isset($_SESSION['admin'])) :  ?>
-                <li><a href="#">Gestionar Categorías</a>
+                <li><a href="<?= base_url ?>categoria/index">Gestionar Categorías</a>
                 </li>
-                <li><a href="#">Gestionar productos</a>
+                <li><a href="<?= base_url ?>producto/gestion">Gestionar productos</a>
                 </li>
                 <li><a href="#">Gestionar pedidos</a>
                 </li>
@@ -29,6 +28,10 @@
                 </li>
                 <li>
                     <a href="<?= base_url ?>usuario/logout">Cerrar sesión</a>
+                </li>
+            <?php else : ?>
+                <li>
+                    <a href="<?= base_url ?>usuario/registro">Registrarse</a>
                 </li>
             <?php endif; ?>
         </ul>
