@@ -43,6 +43,10 @@ td {
 
 }
 
+.thumb{
+    width: 105px;
+}
+
 /*CONTAINER*/
 
 #container {
@@ -255,6 +259,16 @@ button,
 }
 
 
+.button-gestion{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.button-red{
+    background: red;
+    border: 1px solid orange;
+}
+
 label,
 input[type="button"],
 input[type="submit"],
@@ -290,18 +304,21 @@ button {
 
 .product {
     width: 30%;
+    height: 200px;
     float: left;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.product h2 {
+.product h3 {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 .product img {
+    height: 110px;
     width: 100px;
     margin-bottom: 10px;
 }

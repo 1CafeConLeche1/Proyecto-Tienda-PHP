@@ -60,6 +60,12 @@ class Categoria
         return $categorias;
     }
 
+    public function getOne()
+    {
+        $categoria = $this->db->query("SELECT * FROM categorias WHERE id = ($this->id)");
+        return $categoria->fetch_object();
+    }
+
     public function save()
     {
         $nombre = $this->getNombre();

@@ -204,6 +204,29 @@ class Producto
         return $productos;
     }
 
+    public function getAllbyCategory()
+    {
+        $sql = "SELECT p.*, c.nombre AS 'catNombre' FROM productos  p "
+            . "INNER JOIN categorias c ON c.id = p.categoria_id "
+            . "WHERE p.categoria_id = ($this->categoria_id) "
+            . " ORDER BY id DESC";
+
+        $productos = $this->db->query($sql);
+        return $productos;
+    }
+    public function getRandom()
+    {
+        $productos = $this->db->query("SELECT * FROM productos ORDER BY RAND() LIMIT 3 ");
+        return $productos;
+    }
+
+    public function getOne()
+    {
+
+        $producto = $this->db->query("SELECT * FROM productos WHERE id = ($this->id)");
+        return $producto->fetch_object();
+    }
+
     public function save()
     {
         $nombre = $this->getNombre();
@@ -222,6 +245,44 @@ class Producto
 
         $result = false;
         if ($guardar) {
+            $result = true;
+        }
+        return $result;
+    }
+
+    public function update()
+    {
+        $nombre = $this->getNombre();
+        $descripcion = $this->getDescripcion();
+        $precio = $this->getPrecio();
+        $stock = $this->getStock();
+        $categoria = $this->getCategoria();
+        $imagen = $this->getImagen();
+
+        $sql = "UPDATE productos SET nombre='$nombre', descripcion='$descripcion', precio='$precio', stock='$stock', categoria_id='$categoria'";
+
+        if ($this->getImagen() != null) {
+            $sql .= ",imagen='$imagen'";
+        }
+
+        $sql .= "WHERE id=($this->id);";
+
+        $guardar = $this->db->query($sql);
+
+        $result = false;
+        if ($guardar) {
+            $result = true;
+        }
+        return $result;
+    }
+
+    public function delete()
+    {
+        $sql = "DELETE FROM productos WHERE id=($this->id)";
+        $delete = $this->db->query($sql);
+
+        $result = false;
+        if ($delete) {
             $result = true;
         }
         return $result;
