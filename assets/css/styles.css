@@ -34,7 +34,7 @@ a:hover {
 table {
     text-align: center;
     width: 100%;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
 td {
@@ -85,14 +85,12 @@ td {
 }
 
 #logo {
-    padding: 20px;
-    margin-left: 20px;
     float: left;
 
 }
 
 #logo img {
-    height: 75px;
+    height: 110px;
     float: left;
 }
 
@@ -323,6 +321,12 @@ button {
     margin-bottom: 10px;
 }
 
+.img-carrito{
+    display: block;
+    margin: 10px auto;
+    height: 60px;
+}
+
 .product p {
     font-weight: bold;
     color: #555;
@@ -378,4 +382,22 @@ button {
     color: white;
     background: #222;
     border-top: 4px solid #01B1EA;
+}
+
+/*CARRITO*/
+
+.total-carrito{
+    float: right;
+    width: 295px;
+}
+.button-pedido{
+    display: block;
+    float: right;
+    width: 100px;
+}
+
+.total-carrito h3{
+    display: block;
+    float: left;
+    margin-top: 5px;
 }
