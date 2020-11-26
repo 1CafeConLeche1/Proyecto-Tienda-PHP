@@ -43,7 +43,7 @@ td {
 
 }
 
-.thumb{
+.thumb {
     width: 105px;
 }
 
@@ -259,12 +259,12 @@ button,
 }
 
 
-.button-gestion{
+.button-gestion {
     margin-bottom: 5px;
     margin-top: 5px;
 }
 
-.button-red{
+.button-red {
     background: red;
     border: 1px solid orange;
 }
@@ -328,6 +328,45 @@ button {
     color: #555;
     margin-bottom: 10px;
 }
+
+#detail-product {
+    width: 100%;
+}
+
+#detail-product .image {
+    width: 47%;
+    float: left;
+    display: block;
+}
+
+#detail-product img {
+    width: 100%;
+    float: left;
+    display: block;
+}
+
+#detail-product .data {
+    margin-top: 50px;
+    width: 50%;
+    float: right;
+}
+
+#detail-product .button {
+    width: 200px;
+    text-align: center;
+}
+
+#detail-product .description {
+    margin-bottom: 20px;
+}
+
+#detail-product .price {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #444;
+}
+
+
 
 /* FOOTER */
 
