@@ -396,8 +396,39 @@ button {
     width: 100px;
 }
 
+.button-delete{
+    display: block;
+    float: left;
+    width: 100px;
+}
+
+.button-carrito{
+    width: 70px;
+    margin: 0px auto;
+    text-align: center;
+}
+
 .total-carrito h3{
     display: block;
     float: left;
     margin-top: 5px;
 }
+
+.delete-carrito{
+    float: left;
+    width: 295px;
+}
+
+.updown-unidades .button{
+    width: 20px;
+    display: block;
+    float: left;
+    padding: 2px;
+    margin: 7px;
+}
+
+.updown-unidades{
+    width: 80px;
+    margin: 0px auto;
+}
+
